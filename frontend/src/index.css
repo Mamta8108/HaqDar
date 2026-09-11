@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Serif:wght@600;700&display=swap');
+
+:root {
+  --paper: #F4EFE6;
+  --card: #FFFFFF;
+  --ink: #1F2E4A;
+  --ink-soft: #5C677D;
+  --gold: #C28800;
+  --gold-soft: #FFF5DC;
+  --green: #2B7A4B;
+  --green-soft: #E5F6EC;
+  --stamp: #C0392B;
+  --stamp-soft: #FDE8E6;
+  --border: rgba(31, 46, 74, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-confirmed { background: var(--green-soft); color: var(--green); }
+.badge-pending { background: var(--gold-soft); color: var(--gold); }
+.badge-unconfirmed { background: var(--stamp-soft); color: var(--stamp); }
+
+.mono-hash {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-soft);
+  word-break: break-all;
+}
